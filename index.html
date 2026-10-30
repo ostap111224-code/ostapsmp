@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ostap SMP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0c0a10;
+            color: #ffffff;
+            font-family: 'Press Start 2P', monospace;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(to bottom, #19141b, #0c0a10);
+            padding: 50px 20px;
+            border-bottom: 5px solid #281e28;
+        }
+        .logo {
+            max-width: 300px;
+            height: auto;
+            border: 5px solid #a855f7;
+            border-radius: 15px;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 0 20px #a855f7;
+            margin-bottom: 20px;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        h1 {
+            color: #d8b4fe;
+            font-size: 2.5em;
+            text-shadow: 3px 3px #0c0a10;
+        }
+        h2 {
+            color: #e9d5ff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .ip-section {
+            background-color: #19141b;
+            padding: 30px 20px;
+            border-top: 3px solid #281e28;
+            border-bottom: 3px solid #281e28;
+        }
+        .ip-button {
+            background-color: #a855f7;
+            color: #ffffff;
+            border: none;
+            padding: 20px 40px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 5px 5px 0px #3b0764;
+        }
+        .ip-button:hover {
+            background-color: #7c3aed;
+            transform: translateY(-5px);
+        }
+        .ip-button:active {
+            transform: translateY(0);
+        }
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #3b0764;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.8em;
+        }
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+            from { bottom: 0; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+        @keyframes fadeout {
+            from { bottom: 30px; opacity: 1; }
+            to { bottom: 0; opacity: 0; }
+        }
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .card {
+            background-color: #19141b;
+            border: 3px solid #281e28;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .card h3 {
+            color: #d8b4fe;
+            
+            
